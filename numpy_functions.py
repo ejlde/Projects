@@ -6,6 +6,7 @@ Created on Thu Mar  2 21:48:31 2023
 """
 
 import numpy as np
+#hi
 
 x = np.array([
     [1,2,3,7],
