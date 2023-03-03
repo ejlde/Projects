@@ -70,12 +70,17 @@ a = np.array([
 [8,5,3,1]
 ])
 
-print(np.split(a,4)) # needs to be an equal division
+#print(np.split(a,4)) # needs to be an equal division
 #np.hsplit()
 
 ##
 # Adding Values
 b = [10,20,30,40]
 
+#a = np.append(a,b)
+#print(c)
+
+a = np.insert(a,2,b,axis=1)
+print(a)
 
 
