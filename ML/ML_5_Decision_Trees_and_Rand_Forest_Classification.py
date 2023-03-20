@@ -35,5 +35,5 @@ clf4.fit(x_train,y_train)
 print(f'SVC: {clf.score(x_test,y_test)}') # Support vec has higher accuracy %
 print(f'KNN: {clf2.score(x_test,y_test)}')
 print(f'DTC: {clf3.score(x_test,y_test)}')
-print(f'RFC: {clf4.score(x_test,y_test)}')
+print(f'RFC: {clf4.score(x_test,y_test)}') # also very high
 
