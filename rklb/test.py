@@ -11,12 +11,15 @@ import json,statistics
 
 # 2) Processing the response JSON
 with open('screening_metadata.json',encoding = "utf-8") as f:
-    data = json.load(f)  # dictionary
-    #keys = []
-    #vals = []
-    #print(data.keys()) #
-    # print(data['screeningParameters']) 
-
+    data = json.load(f)
+    catalogs = data['catalog']
+    perigees = []
+    sources = []
+    for temp in catalogs:
+        perigees.append(temp['perigee'])
+        if temp['source'] not in sources:
+            sources.append(temp['source'])
+print(sources)
 
     
 

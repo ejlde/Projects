@@ -4,9 +4,7 @@ Created on: 11/18/2023
 Comment: The purpose of this script is to "retrive" json data
 from the LeoLabs api, process the expected response json from that api,
 then evaluate and print the status of that response.
-
 """
-
 import json
 import statistics
 
@@ -26,24 +24,18 @@ with open('screening_metadata.json',encoding = "utf-8") as f:
     sources = []
     for temp in catalogs:
         perigees.append(temp['perigee'])
-        sources.append(temp['source'])
-
+        if temp['source'] not in sources:
+            sources.append(temp['source'])
 
 # 3) Print the status of the screening & whether there are any CDMs.
 # a) expected collisions,
-
 print("The expected number of collisions is: ", data['expectedCollisions'])
-
 # b) number of objects screened
-
 print("The number of objects screened is: " , data['catalogSize'])
-
 # c) min/max/median perigee of objects,
-
 print("The minimum perigee is: " , min(perigees))
 print("The maximum perigee is: " , max(perigees))
-print("The median of the perigees is: " , statistics.median(perigees))
-
+print("The median perigee is: " , statistics.median(perigees))
 #  d) list of data sources used
-print("The list of data sources can be printed by uncommenting the line below. ")
+print("The list of data sources used is: ", sources)
 #print(sources)
