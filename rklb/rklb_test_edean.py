@@ -38,4 +38,3 @@ print("The maximum perigee is: " , max(perigees))
 print("The median perigee is: " , statistics.median(perigees))
 #  d) list of data sources used
 print("The list of data sources used is: ", sources)
-#print(sources)
