@@ -1,11 +1,9 @@
 
 # Importing modules
 from datetime import timezone,timedelta,datetime as dt
-#import win32com.client as win
 import warnings
 import random
 import pandas as pd
-import pytz
 import streamlit as st
 import time
 
@@ -15,13 +13,15 @@ warnings.simplefilter(action='ignore',category=FutureWarning)
 # JDAY, AOS, LOS, SCID GND REV MAXE
 global data 
 now = dt.now(timezone.utc).replace(microsecond=0)
-UTC = pytz.utc
+
 
 jday = now.timetuple().tm_yday
 
 
+
 aos_data = []
 los_data = []
+jday_data = []
 scid = [1,2,3,4,5,6,\
         6,2,3,1,5,4,\
         1,2,3,4,5,6]
