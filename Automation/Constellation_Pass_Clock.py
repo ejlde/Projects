@@ -41,7 +41,7 @@ for i in range(3,21): # 3 to 21 minutes ahead
     los_data.append(now + d1) # whereas in the emails its just a time
 
 
-data = [] ## Can combine these 2 loops ##
+data = [] ## Can combine these 2 loops 
 for i in range(0,len(aos_data)):
     contact = [jday_data[i],aos_data[i],los_data[i],scid[i],gnd[i],ele[i]]
     # used to have jday = problematic when trying to use regular (actual) methodology
