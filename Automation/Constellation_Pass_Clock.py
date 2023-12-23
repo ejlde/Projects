@@ -196,7 +196,7 @@ def gui():
 
             st.dataframe(last8.style.apply(highlight_active,axis=1))
             st.caption("\U0001F7E9 Active \U0001F7E8 Upcoming, The colors will alternate withing 30 seconds of AOS & LOS.")
-            time.sleep(0.1)
+            time.sleep(1)
 
 if __name__ == '__main__':
 
