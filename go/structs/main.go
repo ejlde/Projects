@@ -40,3 +40,17 @@ func (pointerToPerson *person) updateName(newFirstaname string) {
 func (p person) print() {
 	fmt.Printf("%+v", p)
 }
+
+// Value types -- need pointers to change in a function
+// int
+// float
+// string
+// bool
+// structs
+
+// Reference Types -- dont need pointers to update values
+// slices
+// maps
+// channels
+// pointers
+// functions
